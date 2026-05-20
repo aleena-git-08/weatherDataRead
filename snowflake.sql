@@ -13,3 +13,8 @@ TYPE = 'JSON';
 
 CREATE OR REPLACE STAGE weather_stage
 URL='s3://weather-project-bucket-001/'
+
+CREDENTIALS=(
+AWS_KEY_ID=os.getenv('access_key')
+AWS_SECRET_KEY=os.getenv('Secret_access_key')
+)
