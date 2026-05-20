@@ -11,3 +11,9 @@ def lambda_handler(event, context):
 
         data = record['dynamodb']['NewImage']
         file_name = f"{uuid.uuid4()}.json"
+
+        s3.put_object(
+            Bucket=BUCKET_NAME,
+            Key=file_name,
+            Body=json.dumps(data)
+        )
