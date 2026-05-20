@@ -7,3 +7,6 @@ use schema weather_schema;
 CREATE OR REPLACE TABLE weather_table (
     data VARIANT
 );
+
+CREATE OR REPLACE FILE FORMAT weather_json_format
+TYPE = 'JSON';
