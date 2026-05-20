@@ -30,3 +30,5 @@ file_format=(
 type='json'
 )
 on_error=continue;
+
+select * from weather_table;
