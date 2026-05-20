@@ -20,3 +20,13 @@ AWS_SECRET_KEY=os.getenv('Secret_access_key')
 )
 
 FILE_FORMAT = weather_json_format;
+
+create or replace pipe weather_pipe
+auto_ingest = TRUE
+as
+copy into weather_table
+from @weather_stage
+file_format=(
+type='json'
+)
+on_error=continue;
