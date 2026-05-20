@@ -10,3 +10,4 @@ def lambda_handler(event, context):
     for record in event['Records']:
 
         data = record['dynamodb']['NewImage']
+        file_name = f"{uuid.uuid4()}.json"
