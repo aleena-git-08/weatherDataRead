@@ -17,3 +17,6 @@ def lambda_handler(event, context):
             Key=file_name,
             Body=json.dumps(data)
         )
+    return {
+        'statusCode': 200
+    }
