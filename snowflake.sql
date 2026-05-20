@@ -18,3 +18,5 @@ CREDENTIALS=(
 AWS_KEY_ID=os.getenv('access_key')
 AWS_SECRET_KEY=os.getenv('Secret_access_key')
 )
+
+FILE_FORMAT = weather_json_format;
