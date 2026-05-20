@@ -10,3 +10,6 @@ CREATE OR REPLACE TABLE weather_table (
 
 CREATE OR REPLACE FILE FORMAT weather_json_format
 TYPE = 'JSON';
+
+CREATE OR REPLACE STAGE weather_stage
+URL='s3://weather-project-bucket-001/'
