@@ -20,3 +20,7 @@ DESC INTEGRATION s3_int;
 CREATE OR REPLACE STAGE weather_stage
 URL='s3://weather-project-bucket-001/'
 STORAGE_INTEGRATION = s3_int;
+ls @weather_stage;
+
+CREATE OR REPLACE FILE FORMAT weather_json_format
+TYPE = 'JSON';
