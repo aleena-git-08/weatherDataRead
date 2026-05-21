@@ -14,3 +14,9 @@ STORAGE_PROVIDER = S3
 ENABLED = TRUE
 STORAGE_AWS_ROLE_ARN = os.getenv('STORAGE_AWS_ROLE_ARN')
 STORAGE_ALLOWED_LOCATIONS =('s3://weather-project-bucket-001/');
+
+DESC INTEGRATION s3_int;
+
+CREATE OR REPLACE STAGE weather_stage
+URL='s3://weather-project-bucket-001/'
+STORAGE_INTEGRATION = s3_int;
